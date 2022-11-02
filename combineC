@@ -1,7 +1,0 @@
-touch ../textFiles/5c.txt
-touch ../textFiles/5c_.txt
-touch ../textFiles/5c__.txt
-touch ../textFiles/5c___.txt
-python3 addNewLine.py ../textFiles/5c.txt ../textFiles/5c_.txt
-python3 textToArrow.py ../textFiles/5c_.txt ../textFiles/5c__.txt
-python3 tabifyText.py in=../textFiles/5c__.txt out=../textFiles/5c___.txt space=8
