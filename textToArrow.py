@@ -22,6 +22,9 @@ for line in f:
             and ord(line[1]) == 8224 and ord(line[2]) == 8217:
             line = line[3:]
             ret += "$\\rightarrow$"
+        elif ord(line[0]) == 8594:
+            line = line[1:]
+            ret += "$\\rightarrow$"
         else:
             ret += line[0]
             line = line[1:]
