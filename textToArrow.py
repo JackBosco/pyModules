@@ -1,11 +1,15 @@
+"""
+Copy and paste functionality for LaTex arrows. 
+Copy the plain text arrow characters. Paste into a text file. On runtime, specify input(required) and output files in the command line (INCLUDING EXTENSIONS).
+If no output file is specified, output printed to the command line. 
+    Arrows are three specific unicode characters in order:
+        chr(226) chr(8224) chr(8217)
+Author: Jack Bosco (2022)
+"""
 from pyArgs import pyArgs
-
 p = pyArgs(["in!", "out"])
 p.parse()
-if "in" in p.params:
-    f = open(p.params["in"], 'r')
-else:
-    f = open("in.txt", 'r')
+f = open(p.getArgs()["in"], 'r')
 ret = ""
 for line in f:
     while line[0] == ' ':
@@ -21,7 +25,7 @@ for line in f:
         else:
             ret += line[0]
             line = line[1:]
-if "out" in p.params.keys():
-    open(p.params["out"], 'w').write(ret)
+if "out" in p.getArgs().keys():
+    open(p.getArgs()["out"], 'w').write(ret)
 else:
     print(ret)
