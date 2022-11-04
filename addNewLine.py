@@ -8,7 +8,7 @@ args: in!, out
 If no output file is specified, output printed to the command line. 
 Author: Jack Bosco (2022)
 """
-def newLines(text):
+def run(text):
     ret = ""
     for line in text.split("\n"):
         while len(line) > 0 and line[0] == ' ':
@@ -22,7 +22,7 @@ def main():
     p = pyArgs(["in!", "out"])
     p.parse()
     f = open(p.getArgs()["in"], 'r').read()
-    r = newLines(f)
+    r = run(f)
     if "out" in p.getArgs().keys():
         open(p.getArgs()["out"], 'w').write(r)
     else:
