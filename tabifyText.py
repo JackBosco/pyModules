@@ -12,7 +12,7 @@ Author: Jack Bosco (2022)
 def run(text, space):
     ret = ""
     for line in text.split('\n'):
-        ret += "\hspace{" + str(space) + "ex}" + "\n"
+        ret += "\hspace{" + str(space) + "ex}"
         ret += line + '\n'
     return ret[:-1]
 
