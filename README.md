@@ -1,11 +1,16 @@
 # pyModules
 Misc. Modules I made in python
+***Author: Jack Bosco***
 
 ## pyArgs.py
 Class for parsing command line arguments  
 Arguments can be in the following syntax:  
-`python program_name.py x=5 text=hello`  
-`python program_name.py 5 hello`  
+`python program_name.py x=5 text=hello` *unordered*  
+`python program_name.py 5 hello` *ordered*
+
+Required arguments:
+- specified with `!` at the end of the argument name
+- omit the `!` when specifying the argument in the command line
 
 Raises:
 - Exception: `Argument invalid: *arg` arg (to the left of the =) is not in the specifications
