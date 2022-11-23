@@ -1,5 +1,5 @@
 # pyModules
-Misc. Modules I made in python
+Various Modules I made to copy and paste plain text into LaTex code
 ***Author: Jack Bosco***
 
 ## pyArgs.py
@@ -58,3 +58,18 @@ Arrows are:
     > ->
 - OR these three characters in order:
     > -->
+
+## combine.py
+Supports chaining together up to three pyModule scripts on a given input in a sweet looking one-liner
+> args:
+> - in! :  input file with extension (required)
+> - first! : first algorithm to transform input (required) (options are textToArrow : t2a, addNewLine : aNL, tabifyText: tab)
+> - second : second algorithm to transform input (options are textToArrow : t2a, addNewLine : aNL, tabifyText : tab)
+> - third  : third algorithm to transform input (options are textToArrow : t2a, addNewLine : aNL, tabifyText : tab)
+> - spaces : `int`, optionally specify the amount of spaces to tabify if tab is included. Default is 4.
+> - out : out file
+>> Examples:
+>> `% python3 ~/Documents/pyModules/combine.py in=temp.txt first=aNL second=t2a third=tab spaces=1`  
+>> `% python3 ~/Documents/pyModules/combine.py in=temp.txt aNL tab out=newFile.txt`
+
+***if you read this far, THANK YOU***
