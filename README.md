@@ -60,15 +60,15 @@ Arrows are:
     > -->
 
 ## combine.py
-Supports chaining together up to three pyModule scripts on a given input in a sweet looking one-liner
+Supports chaining together up to three pyModule transformations on a given input in a sweet looking one-liner. Transformation output is fed into the next trasformation in sequential order, i.e. `input -> first! -> second -> third -> output`
 > args:
 > - in! :  input file with extension (required)
-> - first! : first algorithm to transform input (required) (options are textToArrow : t2a, addNewLine : aNL, tabifyText: tab)
-> - second : second algorithm to transform input (options are textToArrow : t2a, addNewLine : aNL, tabifyText : tab)
-> - third  : third algorithm to transform input (options are textToArrow : t2a, addNewLine : aNL, tabifyText : tab)
+> - first! : first transformation on input (required) (options are textToArrow : t2a, addNewLine : aNL, tabifyText: tab)
+> - second : second transformation on input (options are textToArrow : t2a, addNewLine : aNL, tabifyText : tab)
+> - third  : third transformation on input (options are textToArrow : t2a, addNewLine : aNL, tabifyText : tab)
 > - spaces : `int`, optionally specify the amount of spaces to tabify if tab is included. Default is 4.
-> - out : out file
->> Examples:
+> - out : output file. Defaults to command line if not specified
+>> Examples:  
 >> `% python3 ~/Documents/pyModules/combine.py in=temp.txt first=aNL second=t2a third=tab spaces=1`  
 >> `% python3 ~/Documents/pyModules/combine.py in=temp.txt aNL tab out=newFile.txt`
 
