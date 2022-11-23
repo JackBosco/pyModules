@@ -1,5 +1,6 @@
 """
 Returns tabular in LaTex syntax from a python printed list
+WORK IN PROGRESS
 """
 def run(rows:list, null="NULL"):
     ret = ""
@@ -29,7 +30,7 @@ def main():
     from pyArgs import pyArgs
     p = pyArgs(["out"])
     p.parse()
-    l = [[1,2,3],[4,5,6, "poop"],[7,8,9]]
+    l = [[1,2,3],[4,5,6, "lonely cell"],[7,8,9]]
     r = run(l)
     if "out" in p.getArgs().keys():
         open(p.getArgs()["out"], 'w').write(r)
